@@ -1,0 +1,20 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    @include mobile {
+        width: calc(100% - #{gutter--bp_mobile});
+    }
+
+    @include tablet {
+        width: calc(100% - #{gutter--bp_tablet});
+    }
+
+    @include desktop {
+        width: calc(100% - #{gutter--bp_desktop});
+    }
+}
