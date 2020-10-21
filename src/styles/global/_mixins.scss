@@ -15,3 +15,29 @@
         @content;
     }
 }
+
+@mixin wide-desktop {
+    @media screen and (min-width: $layout--bp_wide){
+        @content;
+    }
+}
+
+.container {
+    @include mobile {
+        width: calc(100% - #{$gutter--bp_mobile});
+    }
+
+    @include tablet {
+        width: calc(100% - #{$gutter--bp_tablet});
+    }
+
+    @include desktop {
+        width: calc(100% - #{$gutter--bp_desktop});
+    }
+
+    @include wide-desktop {
+        width: calc(100% - #{$gutter--bp_wide});
+    }
+
+    margin: 0 auto;
+}

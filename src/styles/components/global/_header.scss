@@ -1,0 +1,274 @@
+body {
+    background: grey; // temporary
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.7em;
+}
+.header {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    display: block;
+
+    &__top-area {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            
+            .left {
+                display: none;
+
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+
+                @include desktop {
+                    flex-direction: row;
+                }
+
+                p {
+                    color: $primary--color;
+                    margin-right: 15px;
+
+                    @include tablet {
+                        margin-bottom: 7px;
+                    }
+
+                    @include desktop {
+                        margin-bottom: 0px;
+                    }
+                    
+                    i {
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            color: $primary--color;
+            text-transform:  uppercase;
+            
+            @include tablet {
+                width: auto;
+                flex-direction: column;
+            }
+
+            @include desktop {
+                flex-direction: row-reverse;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: inline;
+                    
+                    a {
+                        color: #fff;
+                        display: inline-block;
+                        font-size: 14px;
+                        height: 39px;
+                        margin: 0 -2.5px;
+                        padding: 6px;
+                        text-align: center;
+                        transition: color ease-in-out 0.2s, background ease-in-out 0.2s;
+                        width: 33px;
+
+                        @include tablet() {
+                            width: 40px;
+                        }
+
+                        &:hover {
+                            background: $primary--color;
+                            color: $elegant--color;
+                        }
+
+                        i {
+                            background: none;
+                        }
+                    }
+                    
+                }
+            }
+
+            .book-table {
+                a {
+                    background: #d0963e none repeat scroll 0 0;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    padding: 13px 10px;
+                    transition: color ease-in-out 0.2s, background ease-in-out 0.2s;
+
+                    @include mobile {
+                        padding: 13px 10px;
+                    }
+
+                    &:hover {
+                        background: $primary--color;
+                        color: $elegant--color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mainmenu-area {
+        background: #212324 none repeat scroll 0 0;
+
+        @include desktop {
+            background: transparent;
+        }
+
+        .navbar {
+            min-height: 50px;
+            border: 1px solid transparent;
+
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__header {
+                padding: 15px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .navbar-brand {
+                    display: none;
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+
+                .navbar-brand.white{
+                    display: block;
+
+                    img {
+                        display: block;
+                        height: auto;
+                    }
+                }
+                
+                .hamburger {
+                    width: 46px;
+                    height: 36px;
+                    background: none;
+                    border: solid 2px #fff;
+                    cursor: pointer;
+                    border-radius: 2px;
+
+                    @include desktop {
+                        display: none;
+                    }
+
+                    &-inner{
+                        height: 2px;
+                        width: 22px;
+                        background-color: #fff;
+                        display: block;
+                        margin: 0 auto;
+
+                        &:first-child {
+                            margin-top: 5px;
+                        }
+
+                        &:not(last-child) {
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            &__mainmenu {
+                display: none;
+                overflow-x: visible;
+                -webkit-overflow-scrolling: touch;
+                border-top: 1px solid #111;
+                -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+
+                &.active {
+                    display: block;
+                }
+
+                @include desktop {
+                    border-top: none;
+                    box-shadow: none;
+                }
+
+                ul {
+                    width: 100%;
+                    max-height: 200px;
+                    overflow: scroll;
+                    overflow-x: hidden;
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 10px;
+
+                    @include desktop {
+                        overflow: hidden;
+                        margin-top: -1px;
+                    }
+
+                    li {
+
+                        @include desktop{
+                            float: left
+                        }
+
+                        a {
+                            display: block;
+                            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+                            color: $primary--color;
+                            font-size: 13px;
+                            font-weight: 700;
+                            letter-spacing: 2px;
+                            padding: 10px;
+                            text-transform: uppercase;
+                            -webkit-transition: all 0.3s ease 0s;
+                            transition: all 0.3s ease 0s;
+
+                            @include desktop {
+                                padding: 30px 15px;
+                                letter-spacing: 0;
+                            }
+
+                            &:hover {
+                                color: $elegant--color;
+                            }
+                        }
+
+                        &.active a {
+                            color: $elegant--color;
+                            @include desktop {
+                                border-top: 2px solid $elegant--color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
