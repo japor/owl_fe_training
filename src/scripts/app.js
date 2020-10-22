@@ -1,4 +1,5 @@
 import '../styles/app.scss';
+import Slider from './components/slider';
 
 // Hamburger
 const hamburger = document.querySelector("#js-hamburger");
@@ -10,4 +11,10 @@ hamburger.addEventListener("click", () => {
     }else{
         mainNavigation.classList.add('active');
     }
+});
+
+// Initialize slider.
+const slider = new Slider({
+    speed: 3000,
+    auto: true
 });
