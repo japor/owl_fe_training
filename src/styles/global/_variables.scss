@@ -1,14 +1,14 @@
 // Breakpoints
 $max-width: 1440px !default;
 $max-container: 1280px !default;
-$layout--bp_mobile: 375px;
+$layout--bp_mobile: 320px;
 $layout--bp_tablet: 768px;
-$layout--bp_desktop: 1024px;
+$layout--bp_desktop: 992px;
 $layout--bp_wide: 1440px;
-$layout--bp_large: 1920px;
 $gutter--bp_mobile: 40px;
 $gutter--bp_tablet: 80px;
-$gutter--bp_desktop: 160px;
+$gutter--bp_desktop: 120px;
+$gutter--bp_wide: 320px;
 
 $primary--color: #FFFFFF;
 $secondary--color: #212324;
