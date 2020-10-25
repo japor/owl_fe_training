@@ -1,13 +1,6 @@
-body {
-    background: grey; // temporary
-    font-family: "Lato", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 1.7em;
-}
 .header {
     width: 100%;
+    height: 100vh;
     position: relative;
 
     &__top-area {

@@ -20,7 +20,6 @@ class Slider {
     autoSlide(){
         setInterval( () => {
             this.nextButton.click();
-            console.log('gg');
         }, this.speed);
     }
 

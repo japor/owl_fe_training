@@ -12,3 +12,31 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.7em;
+
+    section {
+        padding: 50px 0;
+
+        @include desktop {
+            padding: 100px 0;
+        }
+    }
+}
