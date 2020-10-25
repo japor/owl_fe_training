@@ -1,0 +1,112 @@
+.promotion-area {
+    // background-color: grey;
+    position: relative;
+
+   
+
+   &__background {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        
+        &:after {
+            background: #000 none repeat scroll 0 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0.8;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+   }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        .promo-item {
+            width: 100%;
+            color: #fff;
+
+            &:not(:last-child) {
+                padding-bottom: 30px;
+
+                @include desktop {
+                    margin-right: 30px;
+                    padding-bottom: 0px;
+                }
+            }
+
+            &__img {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .rate {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    label {
+                        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+                        border-radius: 50%;
+                        font-size: 16px;
+                        height: 100px;
+                        left: 50%;
+                        margin-left: -50px;
+                        margin-top: -50px;
+                        padding-top: 18px;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        width: 100px;
+                        z-index: 1;
+
+                        span {
+                            display: block;
+                            font-size: 28px;
+                            font-weight: 700;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+
+            &__details {
+                text-align: center;
+                padding-top: 30px;
+
+                h4 {
+                    font-family: "Herr Von Muellerhoff", cursive;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                a {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+

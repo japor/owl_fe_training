@@ -40,3 +40,61 @@ body {
         }
     }
 }
+
+h2.area-title {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+
+    @include desktop {
+        font-size: 50px;
+    }
+
+    span {
+        font-size: 60px;
+        color: #d0963e;
+        display: inline-block;
+        font-family: "Herr Von Muellerhoff", cursive;
+        margin: 0;
+        padding: 0 10px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-weight: 700;;
+        
+        @include desktop {
+            font-size: 80px;
+        }
+    }
+}
+
+h3.area-title {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+
+    @include desktop {
+        font-size: 30px;
+    }
+}
+
+a.cta-button {
+    border: 1px solid #d0963e;
+    color: #d0963e;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 7px 23px;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+        background-color: #d0963e;
+        color: #ffffff;
+    }
+}

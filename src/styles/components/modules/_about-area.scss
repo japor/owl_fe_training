@@ -20,33 +20,13 @@
         h2 {
             color: #212324;
             font-family: "Lato", sans-serif;
-            font-size: 40px;
             text-transform: uppercase;
             margin-bottom: 30px;
             font-weight: 700;
-            text-align: center;
-
-            @include desktop {
-                text-align: left;
-                font-size: 48px;
-            }
 
             span {
-                color: #d0963e;
-                display: inline-block;
-                font-family: "Herr Von Muellerhoff", cursive;
-                font-size: 55px;
-                margin: 0;
-                padding: 0 10px;
                 padding-bottom: 10px;
-                text-transform: capitalize;
-                letter-spacing: 2px;
                 border-bottom: solid 2px #d0963e;
-
-                @include desktop {
-                    text-align: left;
-                    font-size: 80px;
-                }
             }
         }
 
@@ -55,21 +35,7 @@
         }
 
         a {
-            border: 1px solid #d0963e;
-            color: #d0963e;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
             margin-top: 30px;
-            padding: 7px 23px;
-            text-transform: uppercase;
-            transition: all ease-in-out 0.3s;
-
-            &:hover {
-                background-color: #d0963e;
-                color: #ffffff;
-            }
         }
     }
     
@@ -89,13 +55,16 @@
         .image {
             width: 100%;
 
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
             @include tablet {
                 width: calc(50% - 15px);
             }
 
             img {
                 width: 100%;
-                margin-bottom: 30px;
             }
         }
     }
