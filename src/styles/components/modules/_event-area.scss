@@ -1,0 +1,126 @@
+.event-area {
+    position: relative;
+    width: 100%;
+
+    &__background {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 0;
+   }
+
+   &__contents {
+        position: relative;
+        width: 100%;
+
+        .event-item {
+            padding: 40px 0px;
+            border-bottom: 1px solid #C3C3C4;
+
+            @include tablet{
+                padding: 60px 0px;
+            }
+
+            &__img {
+
+                @include tablet {
+                    float: right;
+                    margin-left: 40px;
+                }
+
+                img {
+                   width: 100%;
+                }
+            }
+            
+            &__contents {
+                margin-top: 20px;
+                position: relative;
+
+                @include tablet {
+                    padding-left: 180px;
+                }
+
+                .event-date {
+                    width: 100px;
+                    height: 100px;
+                    background: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    left: 0;
+                    top: -120px;
+                    border: solid 1px #ffffff;
+                    color: #ffffff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include tablet {
+                        top: 0;
+                        width: 150px;
+                        height: 150px;
+                        color: $secondary--color;
+                        border: solid 1px $secondary--color;
+                        background: none;
+                    }
+ 
+                    p {
+                        font-size: 16px;
+                        font-weight: 700;
+                        text-align: center;
+                        text-transform: uppercase;
+                        
+                        span {
+                            font-size: 30px;
+                            display: block;
+
+                            @include tablet {
+                                font-size: 67px;
+                                padding-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .event-details {
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        transition: color ease-in-out 0.3s;
+                        margin-bottom: 15px;
+                        
+                        &:hover {
+                            color: $elegant--color;
+                        }
+                    }
+    
+                    p.event-meta {
+                        margin-bottom: 40px;
+                        padding-bottom: 30px;
+                        position: relative; 
+
+                        &:after {
+                            background: #c1924c none repeat scroll 0 0;
+                            content: "";
+                            height: 2px;
+                            width: 50px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+
+                        a {
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: $elegant--color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
