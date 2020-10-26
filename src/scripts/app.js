@@ -1,5 +1,6 @@
 import '../styles/app.scss';
 import Slider from './components/slider';
+import MenuFilter from './components/menuFilter';
 
 // Hamburger
 const hamburger = document.querySelector("#js-hamburger");
@@ -18,3 +19,6 @@ const slider = new Slider({
     speed: 3000,
     auto: true
 });
+
+// Initialize Menu Filter 
+new MenuFilter();
